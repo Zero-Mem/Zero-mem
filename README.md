@@ -6,6 +6,12 @@ Zero-Mem is a structured memory framework for LLM agents. It retains original in
 
 The term **zero-token memory operations** means that memory construction, organization, routing, retrieval, evidence closure, and calibration use no LLM calls or LLM input/output tokens. Encoder and NER computation, storage, and final-QA inference still have costs.
 
+## 📢 News
+
+- **[2026-10-26]** Our **[Code](https://https://github.com/Zero-Mem/Zero-mem)** is released!
+- **[2026-07-31]** We release the paper **[Zero-Mem](https://arxiv.org/abs/2607.29377)**.
+---
+
 ## 🔎 Overview
 
 - **Original traces as the source of record.** Retrieved evidence retains its source and available session, speaker, and temporal metadata.
@@ -264,3 +270,20 @@ For `graph` and `hierarchy`, prediction and failure filenames use the correspond
 To resume an interrupted run, preserve the original output directory, including `predictions_fusion_raw.jsonl` and `run_config.json`. Set `OUT` in your current Bash shell to the exact output path printed by that run. Rerun **only the Python generation command** from the corresponding example and append `--resume`. Reuse the same `COMMON_ARGS`, dataset selection, source version, data, endpoint, model, and generation settings. Skip the entire fresh-run block so the cache is preserved and no new output path is generated.
 
 In this release, `--reader_prompt_token_budget` uses an approximate **whitespace-word** budget during evidence construction. Actual final-QA token usage is reported separately when returned by the provider.
+
+## 🔗 Citation
+
+If you find this project useful, please cite our paper:
+
+```bibtex
+@misc{xiao2026zeromemzerotokenmemoryoperations,
+      title={Zero-Mem: Zero-Token Memory Operations for LLM Agents}, 
+      author={Yilin Xiao and Zhehan Zhu and Yujing Zhang and Jin Chen and Zijin Hong and Luyao Zhuang and Qinggang Zhang and Shengyuan Chen and Xiaocao Ouyang and Lingfei Ren and Xiao Huang},
+      year={2026},
+      eprint={2607.29377},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2607.29377}, 
+}
+
+``` 
