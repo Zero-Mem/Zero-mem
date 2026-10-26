@@ -1,0 +1,13 @@
+# Direct dependency inventory, not a lockfile of the historical environment.
+# Use the recorded environment where available. Model artifacts are separate.
+numpy
+pandas
+torch
+igraph
+sentence-transformers
+spacy
+spacy-transformers
+openai>=1
+httpx
+tqdm
+pyarrow
